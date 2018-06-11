@@ -1,5 +1,4 @@
-
-Test : https://travis-ci.org/cotsog/short-stories.svg?branch=master
+[![Build Status](https://travis-ci.org/cotsog/short-stories.svg?branch=master)](https://travis-ci.org/cotsog/short-stories)
 //
 Learning Course For Unit Testing in Node JS
 Ref : https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai
