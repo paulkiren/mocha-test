@@ -58,6 +58,23 @@ describe('Books', () => {
                     done();
                 });
         });
+        it('its Should post book and give success ', (done)=> {
+            let book = {
+                title: "Oru Deshathinte Kadha",
+                author : 'S K pottakkad',
+                year : '1960',
+                pages : '350'
+            }
+            chai.request(server).post('/book').send(book).end((err, res)=>{
+                res.should.have.status(200);
+                console.log("Book", res.body)
+                res.body.should.be.a('object');
+                res.body.should.have.property("message");
+                res.body.should.have.property("message").eql("Book successfully added!");
+               
+                done();
+            })
+        })
 
     });
 });
